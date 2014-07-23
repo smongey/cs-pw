@@ -1,13 +1,24 @@
-<?php 
+<?php include('./head.inc'); ?>
 
-/**
- * Page template
- *
- */
+      <div class=wrap>
 
-include("./head.inc"); 
+<section class=news>
 
-echo $page->body;
+	<h1>News</h1>
+	
+	<div class=entries>
 
-include("./foot.inc"); 
+		<div class=entry>
+			<div class=info>
+				<h2><?php echo $page->title; ?></h2>
+				<?php echo $page->body; ?>
+			</div>
+		</div>
 
+	</div>
+
+</section>
+
+</div>
+
+<?php include('./foot.inc') ?>

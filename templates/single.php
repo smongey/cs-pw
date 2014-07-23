@@ -28,7 +28,19 @@
 
 	<aside>
 		<div class=tweets>
-			<p>Lovely feargal murray outside the <a href=#>@TheRSC</a> Swan Theatre Stratford Upon Avon, back tonight performing Lucrece again!!</p>
+
+			<?php 
+			$options = array(
+			  'limit' => 1, 
+			  'cacheSeconds' => 600,
+			  'showDate' => '',
+			  'listItemOpen' => '<p>',
+			  'listItemClose' => '</p>'
+			  ); 
+			$t = $modules->get('MarkupTwitterFeed'); 
+			echo $t->render($options); 
+			?>
+
 			<a href=http://twitter.com/Camilleos class=follow>
 				<span class=icon-social-twitter></span> 
 				<p>Follow Camille</p>
@@ -37,36 +49,19 @@
 		<div class=archive>
 			<h3>News Archive</h3>
 			<ul>
+			<?php 
+			$newspage = $pages->get('1007');
+			foreach($newspage->news_archive as $entry) { ?>
+
 				<li>
-					<a href=#>
-					<h4>Headline Title</h4>
-					<span class=date>Posted 21 June, 2010</span>
+					<a href="<?php echo $entry->url ?>">
+					<h4><?php echo $entry->title ?></h4>
+					<span class=date><?php echo date("j F, Y", $entry->created); ?></span>
 					</a>
 				</li>
-				<li>
-					<a href=#>
-					<h4>Headline Title</h4>
-					<span class=date>Posted 21 June, 2010</span>
-					</a>
-				</li>
-				<li>
-					<a href=#>
-					<h4>Headline Title</h4>
-					<span class=date>Posted 21 June, 2010</span>
-					</a>
-				</li>
-				<li>
-					<a href=#>
-					<h4>Headline Title</h4>
-					<span class=date>Posted 21 June, 2010</span>
-					</a>
-				</li>
-				<li>
-					<a href=#>
-					<h4>Headline Title</h4>
-					<span class=date>Posted 21 June, 2010</span>
-					</a>
-				</li>
+					
+			<?php } ?>
+
 			</ul>
 		</div>
 	</aside>

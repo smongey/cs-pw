@@ -66,7 +66,18 @@
 
 	<aside>
 		<div class=tweets>
-			<p>Lovely feargal murray outside the <a href=#>@TheRSC</a> Swan Theatre Stratford Upon Avon, back tonight performing Lucrece again!!</p>
+
+			<?php 
+			$options = array(
+			  'limit' => 1, 
+			  'cacheSeconds' => 600,
+			  'showDate' => '',
+			  'listItemOpen' => '<p>',
+			  'listItemClose' => '</p>'
+			  ); 
+			$t = $modules->get('MarkupTwitterFeed'); 
+			echo $t->render($options); 
+			?>
 			<a href=http://twitter.com/Camilleos class=follow>
 				<span class=icon-social-twitter></span> 
 				<p>Follow Camille</p>

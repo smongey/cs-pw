@@ -3,8 +3,8 @@
 		<div>
 			<p>&copy; Camille O’Sullivan <?php echo date("Y") ?>. All Rights Reserved.</p>
 			<ul>
-				<li><a href="privacy/">Privacy Policy</a></li>
-				<li><a href="terms/">Terms of Service</a></li>
+				<li><a href="<?php echo $config->urls->root ?>privacy/">Privacy Policy</a></li>
+				<li><a href="<?php echo $config->urls->root ?>terms/">Terms of Service</a></li>
 			</ul>
 		</div>
 		<div>
