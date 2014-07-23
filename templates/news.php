@@ -13,13 +13,24 @@
 		$results = $pages->find("parent=/news/, limit=4, sort=title"); 
 		$pagination = $results->renderPager(array(
 			
-		    'listMarkup' => "<ul class='paginate'>{out}</ul>",
-		    'linkMarkup' => "<a href='{url}' class='more'>{out}</a>",
-		    'nextItemLabel' => "Load More News",
-		    'previousItemLabel' => "Go Back",
-		    'itemMarkup' => "{out}",
-		    'nextItemClass' => "more",
-		    'previousItemClass' => "more",
+
+	"nextItemLabel" => "Load More News",
+    "previousItemLabel" => "Go Back",
+    "listMarkup" => "<ul class='paginate'>{out}</ul>",
+    "itemMarkup" => "<li class='{class}'>{out}</li>",
+    "linkMarkup" => "<a href='{url}'>{out}</a>" ,
+    "nextItemClass" => "more",   
+    "previousItemClass" => "more"
+
+		    // 'listMarkup' => "<ul class='paginate'>{out}</ul>",
+		    // 'linkMarkup' => "<a href='{url}'>{out}</a>",
+		    // 'nextItemLabel' => "Load More News",
+		    // 'previousItemLabel' => "Go Back",
+		    // 'itemMarkup' => "{out}",
+		    // 'nextItemClass' => "more",
+		    // 'previousItemClass' => "more",
+		    // 'currentItemClass' => 'huh',
+		    // 'lastItemClass' => 'last'
 		));
 
 		$count = 0;
