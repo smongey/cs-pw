@@ -1,2 +1,5 @@
 .DS_Store
 config.php
+assets/sessions
+assets/cache
+assets/logs
