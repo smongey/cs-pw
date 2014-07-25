@@ -34,7 +34,7 @@
 		<div class=newsletter>
 			<a href="<?php echo $page->newsletter_link ?>">
 				<span class=icon-social-envelope></span>
-				<h3>Newsletter</h3>
+				<h3>Join Mailing List</h3>
 				<p><?php echo $page->newsletter_text ?></p>
 			</a>
 		</div>
