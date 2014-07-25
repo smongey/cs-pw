@@ -49,8 +49,8 @@
 				<div class=share>
 					<h4>Share</h4>
 					<ul>
-						<li><a href=#><span class=icon-social-twitter></span></a></li>
-						<li><a href=#><span class=icon-social-facebook></span></a></li>
+						<li><a href='http://www.twitter.com/share?url=<?php echo $entry->url ?>'><span class=icon-social-twitter></span></a></li>
+						<li><a href='https://www.facebook.com/sharer/sharer.php?u=<?php echo $entry->url ?>'><span class=icon-social-facebook></span></a></li>
 					</ul>
 				</div>
 			</div>
