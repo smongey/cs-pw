@@ -26,7 +26,7 @@
     <header>
 
 	<nav>
-		<h1><a href="<?php echo $config->urls->root ?>">Camille</a></h1>
+		<h1><a href="<?php echo $config->urls->root ?>">Camille O'Sullivan</a></h1>
 		<ul class=main>
 
 			<?php
