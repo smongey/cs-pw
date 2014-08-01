@@ -15,7 +15,9 @@
 
 		<div class=info>
 			<h2><?php echo $video->title ?></h2>
+			<?php if($video->album_date) { ?>
 			<h3>Posted <?php echo $video->album_date ?></h3>
+			<?php } ?>
 			
 			<div class=arrows>
 				<?php if($video->prev != '') { ?><a class=prev href='<?php echo $video->prev->url ?>'>Previous</a><?php } ?>

@@ -11,8 +11,10 @@
 
 		<div class=info>
 			<h2><?php echo $page->title ?></h2>
-			<h3>Posted <?php echo $page->album_date ?></h3>
-			
+			<?php if($video->album_date) { ?>
+			<h3>Posted <?php echo $video->album_date ?></h3>
+			<?php } ?>
+
 			<div class=arrows>
 				<?php if($page->prev != '') { ?><a class=prev href='<?php echo $page->prev->url ?>'>Previous</a><?php } ?>
 				<?php if($page->next != '') { ?><a class=next href='<?php echo $page->next->url ?>'>Next</a><?php } ?>
@@ -42,7 +44,7 @@
 
 				<li>
 					<a href='<?php echo $video->url ?>'>
-					<img src='<?php echo $video->images->first()->size(200, 130)->url ?>' alt="">
+					<img src='<?php echo $video->images->size(200, 130)->url ?>' alt="">
 					<h5><?php echo $video->title ?></h5>
 					</a>
 				</li>
