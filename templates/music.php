@@ -43,7 +43,9 @@
 	<?php } ?>
 
 	<div class=albums>
+		<?php if($pages->count('parent=/music/')  > 1 ) { ?>
 		<h2>Previous Releases</h2>
+		<?php } ?>
 		<ul>
 
 	<?php
