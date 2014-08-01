@@ -46,7 +46,7 @@
 
 				<li>
 					<a href='<?php echo $video->url ?>'>
-						<img src='<?php echo $video->images->first()->size(200, 130)->url ?>' alt="<?php echo $video->images->first()->description ?>">
+						<img src='<?php echo $video->images->size(200, 130)->url ?>' alt="<?php echo $video->images->first()->description ?>">
 						<h5><?php echo $video->title ?></h5>
 					</a>
 				</li>
